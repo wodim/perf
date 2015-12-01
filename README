@@ -1,0 +1,5 @@
+Well, this is just a stupid script I have written to create charts of the
+performance of php-fpm.
+
+cron line:
+*/1 * * * * (cd perf && python3 logger.py)
