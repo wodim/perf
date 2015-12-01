@@ -3,3 +3,9 @@ performance of php-fpm.
 
 cron line:
 */1 * * * * (cd perf && python3 logger.py)
+
+schema for plot.sqlite:
+CREATE TABLE plot (id INTEGER primary key, _timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                   process_manager TEXT, start_time INTEGER, start_since INTEGER,
+                   accepted_conn INTEGER, listen_queue INTEGER, max_listen_queue INTEGER,
+                   active_processes INTEGER, total_processes INTEGER, _elapsed INTEGER);
